@@ -11,3 +11,7 @@ cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteu
 cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteula reg delete "HKLM\SECURITY\Policy\Secrets\TempSecret2" /f
 cmd.exe /c del C:\Windows\Temp\ld.exe
 cmd.exe /c del C:\Windows\Temp\ld.txt
+
+
+===
+.\Procmon64.exe /AcceptEula /LoadConfig .\defcamp_procmon.pmc /BackingFile C:\Windows\Temp\demo.pml
